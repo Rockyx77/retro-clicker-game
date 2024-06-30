@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retro Clicker Game</title>
+    <style>
+        body {
+            font-family: 'Press Start 2P', cursive;
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            margin-top: 50px;
+        }
+        h1 {
+            font-size: 24px;
+            letter-spacing: 2px;
+        }
+        .button {
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 1.5em;
+            background-color: #f00;
+            color: #000; /* Black text color */
+            text-decoration: none;
+            border: 4px solid #fff;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s ease, color 0.3s ease; /* Added color transition */
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        .button:hover {
+            background-color: #fff;
+            color: #f00; /* Red text color on hover */
+        }
+        .button:active {
+            background-color: #f00;
+            color: #fff; /* White text color when button is clicked */
+        }
+        .reset-button {
+            display: block;
+            margin-top: 20px;
+            font-size: 1em;
+            background-color: #f44336;
+            border: 4px solid #fff;
+            border-radius: 10px;
+            padding: 10px 20px;
+            margin: 0 auto; /* Center align horizontally */
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-transform: uppercase;
+            font-weight: bold;
+            color: #fff; /* White text color for reset button */
+        }
+        .reset-button:hover {
+            background-color: #dc3545;
+        }
+        #score {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Retro Clicker Game</h1>
+    <button onclick="score++;" class="button">Click me!</button>
+    <div id="score">Score: 0</div>
+    <button onclick="score = 0;" class="reset-button">Reset</button>
+
+    <script>
+        let score = 0;
+        setInterval(() => document.getElementById('score').innerText = 'Score: ' + score, 100);
+    </script>
+</body>
+</html>
